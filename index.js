@@ -45,7 +45,7 @@ try {
 } catch (e) {
     console.log(e)
     await page.screenshot({
-        path: 'images/screenshot-exit.png'
+        path: 'images/screenshot.png'
     });
 } finally {
     await browser.close();
