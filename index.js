@@ -39,7 +39,7 @@ try {
             if (!page.url().includes('14654281,14193940/dashboard')) {
                 break;
             }
-            await new Promise(resolve => setTimeout(resolve, 10000))
+            await new Promise(resolve => setTimeout(resolve, process.env.SCREENSHOT_DELAY ?? 10000))
         }
     }
 } catch (e) {
