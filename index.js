@@ -1,5 +1,10 @@
 import puppeteer from 'puppeteer';
 
+if (process.env.SUNNY_USERNAME === undefined || process.env.SUNNY_PASSWORD === undefined) {
+    console.log("Please set SUNNY_USERNAME and SUNNY_PASSWORD environment variables")
+    process.exit(1)
+}
+
 const browser = await puppeteer.launch({
     browser: "chrome",
     args: ['--no-sandbox'],
