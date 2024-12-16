@@ -7,7 +7,7 @@ if (process.env.SUNNY_USERNAME === undefined || process.env.SUNNY_PASSWORD === u
 
 const browser = await puppeteer.launch({
     browser: "chrome",
-    args: ['--no-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 const page = await browser.newPage();
 try {
