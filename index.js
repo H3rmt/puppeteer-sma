@@ -5,10 +5,12 @@ if (process.env.SUNNY_USERNAME === undefined || process.env.SUNNY_PASSWORD === u
     process.exit(1)
 }
 
+console.log("Starting browser")
 const browser = await puppeteer.launch({
     browser: "chrome",
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox'],
 });
+console.log("Browser started")
 const page = await browser.newPage();
 try {
     while (true) {
